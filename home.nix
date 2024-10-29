@@ -33,6 +33,13 @@
         [[ssh-keys]]
         vault = "Andy's Cool Stuff"
     '';
+    ".gitconfig".text = ''
+    [push]
+    	autoSetupRemote = true
+    [user]
+    	name = Andrew Yurovchak
+    	email = andy@yurovchak.net
+    '';
   };
 
   home.sessionVariables = {
