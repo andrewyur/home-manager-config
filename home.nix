@@ -44,6 +44,11 @@
     	name = Andrew Yurovchak
     	email = andy@yurovchak.net
     '';
+    ".jjconfig.toml" = ''
+    [user]
+        name = "Andrew Yurovchak"
+        email = "andy@yurovchak.net"
+    '';
   };
 
   home.sessionVariables = {
