@@ -26,7 +26,7 @@
             nixd
         ];
         shellHook = ''
-            echo `${pkgs.nixd}/bin/hello --version`
+            echo `${pkgs.nixd}/bin/nixd --version`
         '';
       };
     };
