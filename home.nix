@@ -24,8 +24,12 @@
   home.homeDirectory = "/Users/home";
 
   home.packages = [
+    # version control
     pkgs.git
-    pkgs.nixd   # nix language server
+    pkgs.jujutsu
+
+    # nix language server
+    pkgs.nixd
   ];
 
   home.file = {
