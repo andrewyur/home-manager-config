@@ -52,7 +52,8 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "zed";
+    # editing commits is easier with a cli editor
+    EDITOR = "nano";
 
     # Direnv log formatting
     # DIRENV_LOG_FORMAT="$'\033[2mdirenv: %s\033[0m'";
