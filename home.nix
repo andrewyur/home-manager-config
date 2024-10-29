@@ -44,10 +44,10 @@
     	name = Andrew Yurovchak
     	email = andy@yurovchak.net
     '';
-    ".jjconfig.toml" = ''
+    ".jjconfig.toml".text = ''
     [user]
-        name = "Andrew Yurovchak"
-        email = "andy@yurovchak.net"
+    name = "Andrew Yurovchak"
+    email = "andy@yurovchak.net"
     '';
   };
 
