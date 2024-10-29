@@ -13,10 +13,10 @@
   };
 
   programs.fzf.enable = true;
+  programs.zoxide.enable = true;
 
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
     nix-direnv.enable = true;
   };
 
@@ -25,6 +25,7 @@
 
   home.packages = [
     pkgs.git
+    pkgs.nixd   # nix language server
   ];
 
   home.file = {

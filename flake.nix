@@ -21,13 +21,15 @@
         modules = [ ./home.nix ];
       };
 
-      devShells."${system}".default = pkgs.mkShell {
-        packages = with pkgs; [
-            nixd
-        ];
-        shellHook = ''
-            echo `${pkgs.nixd}/bin/nixd --version`
-        '';
-      };
+      # i now have nixd installed globally via home manager, so this devshell is no longer needed
+
+      # devShells."${system}".default = pkgs.mkShell {
+      #   packages = with pkgs; [
+      #       nixd
+      #   ];
+      #   shellHook = ''
+      #       echo `${pkgs.nixd}/bin/nixd --version`
+      #   '';
+      # };
     };
 }
