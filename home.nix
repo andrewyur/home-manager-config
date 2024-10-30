@@ -28,6 +28,9 @@
     pkgs.git
     pkgs.jujutsu
 
+    # fonts
+    pkgs.jetbrains-mono
+
     # nix language server
     pkgs.nixd
   ];
