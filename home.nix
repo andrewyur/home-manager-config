@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, userConfig, pkgs, ... }:
 
 {
   programs.zsh.enable = true;
@@ -20,8 +20,8 @@
     nix-direnv.enable = true;
   };
 
-  home.username = "home";
-  home.homeDirectory = "/Users/home";
+  home.username = userConfig.username;
+  home.homeDirectory = userConfig.homeDirectory;
 
   home.packages = [
     # version control

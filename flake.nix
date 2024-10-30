@@ -12,13 +12,21 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-        # be sure to change if necessary
-        system = "aarch64-darwin";
+        # symlink the appropriate file to config.nix
+        userConfig = import ./config.nix;
+
+        system = userConfig.system;
+
         pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."home" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+
         modules = [ ./home.nix ];
+
+        extraSpecialArgs = {
+            inherit userConfig;
+        };
       };
 
       # i now have nixd installed globally via home manager, so this devshell is no longer needed
