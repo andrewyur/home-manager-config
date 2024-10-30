@@ -52,6 +52,29 @@
     name = "Andrew Yurovchak"
     email = "andy@yurovchak.net"
     '';
+    ".config/zed/settings.json".text = ''
+    {
+      "ui_font_size": 16,
+      "buffer_font_size": 12,
+      "theme": {
+        "mode": "system",
+        "light": "Rosé Pine Dawn",
+        "dark": "One Dark"
+      },
+      "format_on_save": "on",
+      "languages": {
+        "Nix": {
+          "format_on_save": "off"
+        }
+      },
+      "buffer_font_family": "JetBrains Mono",
+      "load_direnv": "shell_hook",
+      "soft_wrap": "editor_width",
+      "terminal": {
+        "working_directory": "current_project_directory"
+      }
+    }
+    '';
   };
 
   home.sessionVariables = {
