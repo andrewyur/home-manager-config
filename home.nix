@@ -28,6 +28,10 @@
     pkgs.git
     pkgs.jujutsu
 
+    # utilities
+    pkgs.watch
+    pkgs.tmux
+
     # fonts
     pkgs.jetbrains-mono
 
