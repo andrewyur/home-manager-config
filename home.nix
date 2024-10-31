@@ -18,7 +18,11 @@
         theme = "robbyrussell";
     };
 
-    programs.fzf.enable = true;
+    programs.fzf = {
+        enable = true;
+        defaultCommand = "rg --files --hidden ~";
+        fileWidgetCommand = "rg --files --hidden ~";
+    };
     programs.zoxide.enable = true;
 
     programs.direnv = {
@@ -37,6 +41,7 @@
         # utilities
         pkgs.watch
         pkgs.tmux
+        pkgs.ripgrep
 
         # fonts
         pkgs.jetbrains-mono
@@ -46,10 +51,12 @@
     ];
 
     home.file = {
+        # 1password ssh agent
         ".config/1password/ssh/agent.toml".text = ''
             [[ssh-keys]]
             vault = "Andy's Cool Stuff"
         '';
+        # git config
         ".gitconfig".text = ''
         [push]
        	autoSetupRemote = true
@@ -57,11 +64,13 @@
        	name = Andrew Yurovchak
        	email = andy@yurovchak.net
         '';
+        # jj config
         ".jjconfig.toml".text = ''
         [user]
         name = "Andrew Yurovchak"
         email = "andy@yurovchak.net"
         '';
+        # zed config
         ".config/zed/settings.json".text = ''
         {
           "ui_font_size": 16,
@@ -86,8 +95,12 @@
           "auto_update": false
         }
         '';
+        # tmux config
         ".tmux.conf".text = ''
         set-option -g default-shell ~/.nix-profile/bin/zsh
+        '';
+        # ignore file for fzf
+        ".ignore".text = ''
         '';
     };
 
