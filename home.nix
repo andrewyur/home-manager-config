@@ -6,6 +6,7 @@
         shellAliases = {
             hmb = "home-manager switch -b backup";
             wjl = "watch -c 'jj log --color=always'";
+            pfr = "pip freeze > requirements.txt"
         };
     };
     programs.zsh.oh-my-zsh = {
