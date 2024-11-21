@@ -5,7 +5,7 @@
         enable = true;
         shellAliases = {
             hmb = "home-manager switch -b backup";
-            wjl = "watch -c 'jj log --color=always'";
+            wjl = "watch -c 'jj log --color=always --ignore-working-copy'";
             pfr = "pip freeze > requirements.txt";
         };
     };
