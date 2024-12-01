@@ -7,6 +7,7 @@
             hmb = "home-manager switch -b backup";
             wjl = "watch -c 'jj log --color=always --ignore-working-copy'";
             pfr = "pip freeze > requirements.txt";
+            cf = "echo '${builtins.readFile ./flake_template.nix}' > flake.nix";
         };
     };
     programs.zsh.oh-my-zsh = {
